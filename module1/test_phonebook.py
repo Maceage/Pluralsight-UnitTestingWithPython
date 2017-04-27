@@ -16,3 +16,8 @@ class PhonebookTest(unittest.TestCase):
         phonebook = Phonebook()
         with self.assertRaises(KeyError):
             phonebook.lookup("missing")
+
+    @unittest.skip("WIP")
+    def test_empty_phonebook_is_consistent(self):
+        phonebook = Phonebook()
+        self.assertTrue(phonebook.is_consistent())
